@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analikha Events | Curating Experiences</title>
+<meta name="description" content="Analikha Events — Curating bespoke cultural, artistic and celebratory experiences with exceptional talent.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        cream:"#FDFBF7", charcoal:"#2C2523", rose:"#C47B72",
+        gold:"#D4AF37", softgold:"#E8D8A8", beige:"#F4EEE5"
+      },
+      fontFamily: {
+        serif:["Playfair Display","serif"],
+        sans:["Inter","sans-serif"]
+      }
+    }
+  }
+}
+</script>
+
+<style>
+html{scroll-behavior:smooth}
+body{background:#FDFBF7;color:#2C2523}
+.serif{font-family:"Playfair Display",serif}
+.gold-line{width:70px;height:1px;background:#D4AF37}
+.glass{background:rgba(255,255,255,.58);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.service-card,.talent-card{transition:all .35s ease}
+.service-card:hover{transform:translateY(-8px);box-shadow:0 25px 60px rgba(44,37,35,.10)}
+.talent-card:hover{transform:translateY(-5px)}
+.nav-link{position:relative}
+.nav-link:after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:#C47B72;transition:width .3s ease}
+.nav-link:hover:after{width:100%}
+.floating{animation:floating 5s ease-in-out infinite}
+@keyframes floating{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.mobile-menu{display:none}.mobile-menu.active{display:block}
+</style>
+</head>
+
+<body class="font-sans">
+
+<!-- NAVIGATION -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-md border-b border-charcoal/5">
+<nav class="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+<a href="#home">
+<img src="assets/analikha-logo.png" alt="Analikha Events" class="w-16 h-16 object-contain">
+</a>
+
+<div class="hidden md:flex items-center gap-9 text-sm tracking-wide">
+<a href="#home" class="nav-link">Home</a>
+<a href="#about" class="nav-link">About</a>
+<a href="#services" class="nav-link">Services</a>
+<a href="#talent" class="nav-link">Talent</a>
+<a href="#impact" class="nav-link">Social Impact</a>
+<a href="#contact" class="nav-link">Contact</a>
+</div>
+
+<a href="#contact" class="hidden md:inline-flex bg-charcoal text-white px-6 py-3 text-xs uppercase tracking-[0.2em] hover:bg-rose transition">Enquire</a>
+
+<button id="menuButton" class="md:hidden text-xl" aria-label="Open menu">
+<i class="fa-solid fa-bars"></i>
+</button>
+</nav>
+
+<div id="mobileMenu" class="mobile-menu md:hidden bg-cream border-t border-charcoal/5">
+<div class="px-6 py-6 flex flex-col gap-5 text-sm">
+<a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a>
+<a href="#talent">Talent</a><a href="#impact">Social Impact</a><a href="#contact">Contact</a>
+</div>
+</div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="relative min-h-screen flex items-center overflow-hidden pt-20">
+<div class="absolute -top-32 -right-32 w-96 h-96 rounded-full border border-gold/20"></div>
+<div class="absolute -bottom-40 -left-40 w-96 h-96 rounded-full border border-rose/10"></div>
+
+<div class="max-w-7xl mx-auto px-6 lg:px-10 w-full">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+
+<div>
+<div class="flex items-center gap-4 mb-7">
+<div class="gold-line"></div>
+<span class="uppercase tracking-[0.3em] text-xs text-rose font-medium">Analikha Events</span>
+</div>
+
+<h1 class="serif text-5xl sm:text-6xl lg:text-7xl leading-[1.05] font-medium mb-7">
+Moments <span class="italic text-rose">worth</span> remembering.
+</h1>
+
+<p class="text-lg text-charcoal/65 leading-8 max-w-xl mb-8">
+Bespoke celebrations, artistic experiences and exceptional talent — thoughtfully brought together under one curated event experience.
+</p>
+
+<div class="flex flex-wrap gap-4">
+<a href="#services" class="inline-flex items-center gap-3 bg-charcoal text-white px-7 py-4 text-sm tracking-wide hover:bg-rose transition">
+Explore Our Services <i class="fa-solid fa-arrow-right text-xs"></i>
+</a>
+<a href="#about" class="inline-flex items-center gap-3 border border-charcoal/20 px-7 py-4 text-sm tracking-wide hover:border-rose hover:text-rose transition">Our Story</a>
+</div>
+
+<div class="mt-12 flex items-center gap-5">
+<div class="w-12 h-px bg-gold"></div>
+<p class="serif italic text-charcoal/60">Curating Experiences</p>
+</div>
+</div>
+
+<div class="relative hidden lg:block">
+<div class="absolute -top-10 -right-10 w-52 h-52 border border-gold/30 rounded-full"></div>
+<div class="absolute -bottom-10 -left-10 w-40 h-40 bg-rose/10 rounded-full"></div>
+<div class="relative z-10">
+<img src="assets/founder.jpg" alt="Founder of Analikha Events" class="w-full max-w-lg ml-auto object-cover aspect-[4/5]">
+<div class="absolute -bottom-8 -left-8 glass border border-white/60 p-6 shadow-xl floating">
+<p class="uppercase tracking-[0.2em] text-[10px] text-rose mb-2">Founded & Curated By</p>
+<p class="serif text-2xl">Deepesha S G</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- INTRO -->
+<section class="py-24 bg-beige">
+<div class="max-w-5xl mx-auto px-6 text-center">
+<div class="flex justify-center mb-6"><div class="gold-line"></div></div>
+<p class="uppercase tracking-[0.3em] text-xs text-rose mb-6">More Than An Event</p>
+<h2 class="serif text-4xl md:text-5xl leading-tight mb-7">
+We don't simply organise events.<br>
+<span class="italic text-rose">We curate experiences.</span>
+</h2>
+<p class="text-charcoal/65 leading-8 max-w-3xl mx-auto">
+Analikha Events brings together celebration, culture, creativity and exceptional talent to create experiences that feel personal, refined and memorable.
+</p>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-28">
+<div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="grid lg:grid-cols-2 gap-20 items-center">
+
+<div class="relative">
+<div class="absolute -top-5 -left-5 w-full h-full border border-gold/30"></div>
+<img src="assets/founder.jpg" alt="Deepesha S G" class="relative z-10 w-full max-w-md mx-auto aspect-[4/5] object-cover">
+</div>
+
+<div>
+<p class="uppercase tracking-[0.3em] text-xs text-rose mb-5">The Founder</p>
+<h2 class="serif text-4xl md:text-5xl mb-7">Deepesha S G</h2>
+<div class="gold-line mb-7"></div>
+<p class="text-charcoal/70 leading-8 mb-6">
+Analikha Events is envisioned as a platform where celebrations meet creativity, culture and meaningful human connection.
+</p>
+<p class="text-charcoal/70 leading-8 mb-8">
+Founded and curated by Deepesha S G, the brand focuses on bringing together skilled artists, performers and event professionals to create bespoke experiences for clients.
+</p>
+<blockquote class="border-l-2 border-gold pl-6">
+<p class="serif text-xl italic text-charcoal/80 leading-8">
+"Every celebration has a story. Our role is to curate the moments that make it unforgettable."
+</p>
+</blockquote>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- VISION & MISSION -->
+<section class="py-24 bg-charcoal text-white">
+<div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="text-center mb-16">
+<p class="uppercase tracking-[0.3em] text-xs text-softgold mb-5">Our Philosophy</p>
+<h2 class="serif text-4xl md:text-5xl">Purpose behind every experience</h2>
+</div>
+
+<div class="grid md:grid-cols-2 gap-px bg-white/10">
+<div class="bg-charcoal p-10 lg:p-14">
+<div class="w-12 h-12 rounded-full border border-gold flex items-center justify-center mb-8"><i class="fa-solid fa-eye text-gold"></i></div>
+<p class="uppercase tracking-[0.25em] text-xs text-rose mb-4">Vision</p>
+<h3 class="serif text-3xl mb-6">Redefining Event Curation</h3>
+<p class="text-white/60 leading-8">
+To redefine event curation by seamlessly integrating luxury experiences, artistic talent and community-driven social initiatives.
+</p>
+</div>
+
+<div class="bg-charcoal p-10 lg:p-14">
+<div class="w-12 h-12 rounded-full border border-gold flex items-center justify-center mb-8"><i class="fa-solid fa-star text-gold"></i></div>
+<p class="uppercase tracking-[0.25em] text-xs text-rose mb-4">Mission</p>
+<h3 class="serif text-3xl mb-6">Connecting Talent & Impact</h3>
+<p class="text-white/60 leading-8">
+To connect exceptional talent — from makeup artists and choreographers to DJs and magicians — with clients while driving grassroots social change and cultural empowerment through our NGO wing.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-28">
+<div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+<div class="max-w-2xl mb-16">
+<p class="uppercase tracking-[0.3em] text-xs text-rose mb-5">What We Curate</p>
+<h2 class="serif text-4xl md:text-5xl mb-6">Our Services</h2>
+<div class="gold-line mb-7"></div>
+<p class="text-charcoal/60 leading-8">
+A curated network of creative professionals designed to support celebrations, cultural programmes and memorable occasions.
+</p>
+</div>
+
+<div class="grid md:grid-cols-2 gap-6">
+
+<div class="service-card bg-beige p-8 lg:p-10">
+<div class="flex justify-between items-start mb-10">
+<div class="w-14 h-14 bg-white flex items-center justify-center"><i class="fa-solid fa-ring text-rose text-xl"></i></div>
+<span class="serif text-4xl text-charcoal/10">01</span>
+</div>
+<p class="uppercase tracking-[0.2em] text-xs text-rose mb-3">Beauty & Bridal</p>
+<h3 class="serif text-3xl mb-5">Bridal & Makeover Services</h3>
+<p class="text-charcoal/60 leading-7 mb-7">Curated makeup and makeover professionals for bridal, celebratory and special-event looks.</p>
+<a href="#talent" class="text-sm font-medium inline-flex items-center gap-2 hover:text-rose">View Artists <i class="fa-solid fa-arrow-right text-xs"></i></a>
+</div>
+
+<div class="service-card bg-beige p-8 lg:p-10">
+<div class="flex justify-between items-start mb-10">
+<div class="w-14 h-14 bg-white flex items-center justify-center"><i class="fa-solid fa-music text-rose text-xl"></i></div>
+<span class="serif text-4xl text-charcoal/10">02</span>
+</div>
+<p class="uppercase tracking-[0.2em] text-xs text-rose mb-3">Performance</p>
+<h3 class="serif text-3xl mb-5">Choreography & Dance</h3>
+<p class="text-charcoal/60 leading-7 mb-7">Dance performances and choreography for weddings, celebrations, cultural events and special occasions.</p>
+<a href="#talent" class="text-sm font-medium inline-flex items-center gap-2 hover:text-rose">View Performers <i class="fa-solid fa-arrow-right text-xs"></i></a>
+</div>
+
+<div class="service-card bg-beige p-8 lg:p-10">
+<div class="flex justify-between items-start mb-10">
+<div class="w-14 h-14 bg-white flex items-center justify-center"><i class="fa-solid fa-wand-magic-sparkles text-rose text-xl"></i></div>
+<span class="serif text-4xl text-charcoal/10">03</span>
+</div>
+<p class="uppercase tracking-[0.2em] text-xs text-rose mb-3">Entertainment</p>
+<h3 class="serif text-3xl mb-5">Magic & Illusion</h3>
+<p class="text-charcoal/60 leading-7 mb-7">Interactive magic and illusion performances designed to create surprise and engagement for audiences.</p>
+<a href="#talent" class="text-sm font-medium inline-flex items-center gap-2 hover:text-rose">Discover Magic <i class="fa-solid fa-arrow-right text-xs"></i></a>
+</div>
+
+<div class="service-card bg-beige p-8 lg:p-10">
+<div class="flex justify-between items-start mb-10">
+<div class="w-14 h-14 bg-white flex items-center justify-center"><i class="fa-solid fa-headphones text-rose text-xl"></i></div>
+<span class="serif text-4xl text-charcoal/10">04</span>
+</div>
+<p class="uppercase tracking-[0.2em] text-xs text-rose mb-3">Music & Sound</p>
+<h3 class="serif text-3xl mb-5">DJ & Sound</h3>
+<p class="text-charcoal/60 leading-7 mb-7">Music and DJ entertainment curated to match the energy, audience and character of your event.</p>
+<a href="#talent" class="text-sm font-medium inline-flex items-center gap-2 hover:text-rose">View DJ <i class="fa-solid fa-arrow-right text-xs"></i></a>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- TALENT -->
+<section id="talent" class="py-28 bg-beige">
+<div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+<div class="text-center max-w-2xl mx-auto mb-16">
+<p class="uppercase tracking-[0.3em] text-xs text-rose mb-5">Our Creative Network</p>
+<h2 class="serif text-4xl md:text-5xl mb-6">Exceptional Talent</h2>
+<p class="text-charcoal/60 leading-8">
+We connect clients with carefully curated artists and performers across multiple event categories.
+</p>
+</div>
+
+<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+<!-- Talent card template -->
+<div class="talent-card bg-white p-7">
+<div class="w-12 h-12 rounded-full bg-rose/10 flex items-center justify-center mb-6"><i class="fa-solid fa-wand-magic-sparkles text-rose"></i></div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-rose mb-2">Makeup Artist</p>
+<h3 class="serif text-2xl mb-3">Bindu Kotresh</h3>
+<p class="text-sm text-charcoal/50 mb-5">@bindukotresh_makeover</p>
+<a href="#contact" class="text-xs uppercase tracking-[0.15em]">Enquire <i class="fa-solid fa-arrow-right ml-2 text-rose"></i></a>
+</div>
+
+<div class="talent-card bg-white p-7">
+<div class="w-12 h-12 rounded-full bg-rose/10 flex items-center justify-center mb-6"><i class="fa-solid fa-wand-magic-sparkles text-rose"></i></div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-rose mb-2">Makeup Artist</p>
+<h3 class="serif text-2xl mb-3">Bindu D S</h3>
+<p class="text-sm text-charcoal/50 mb-5">@Makeoverwith_bindu23</p>
+<a href="#contact" class="text-xs uppercase tracking-[0.15em]">Enquire <i class="fa-solid fa-arrow-right ml-2 text-rose"></i></a>
+</div>
+
+<div class="talent-card bg-white p-7">
+<div class="w-12 h-12 rounded-full bg-rose/10 flex items-center justify-center mb-6"><i class="fa-solid fa-wand-magic-sparkles text-rose"></i></div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-rose mb-2">Makeup Artist</p>
+<h3 class="serif text-2xl mb-3">Shilpa</h3>
+<p class="text-sm text-charcoal/50 mb-5">@makeovershilpa90</p>
+<a href="#contact" class="text-xs uppercase tracking-[0.15em]">Enquire <i class="fa-solid fa-arrow-right ml-2 text-rose"></i></a>
+</div>
+
+<div class="talent-card bg-white p-7">
+<div class="w-12 h-12 rounded-full bg-rose/10 flex items-center justify-center mb-6"><i class="fa-solid fa-wand-magic-sparkles text-rose"></i></div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-rose mb-2">Makeup Artist</p>
+<h3 class="serif text-2xl mb-3">Kavita Desai</h3>
+<p class="text-sm text-charcoal/50 mb-5">@Vk_makeovers_withshilpa</p>
+<a href="#contact" class="text-xs uppercase tracking-[0.15em]">Enquire <i class="fa-solid fa-arrow-right ml-2 text-rose"></i></a>
+</div>
+
+<div class="talent-card bg-white p-7">
+<div class="w-12 h-12 rounded-full bg-rose/10 flex items-center justify-center mb-6"><i class="fa-solid fa-person-running text-rose"></i></div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-rose mb-2">Choreographer</p>
+<h3 class="serif text-2xl mb-3">Vishwaroopam Studio</h3>
+<p class="text-sm text-charcoal/50 mb-5">@Vishwaroopam_studio</p>
+<a href="#contact" class="text-xs uppercase tracking-[0.15em]">Enquire <i class="fa-solid fa-arrow-right ml-2 text-rose"></i></a>
+</div>
+
+<div class="talent-card bg-white p-7">
+<div class="w-12 h-12 rounded-full bg-rose/10 flex items-center justify-center mb-6"><i class="fa-solid fa-person-running text-rose"></i></div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-rose mb-2">Choreographer</p>
+<h3 class="serif text-2xl mb-3">Anil & Fairy</h3>
+<p class="text-sm text-charcoal/50 mb-5">@Anil_fairy</p>
+<a href="#contact" class="text-xs uppercase tracking-[0.15em]">Enquire <i class="fa-solid fa-arrow-right ml-2 text-rose"></i></a>
+</div>
+
+<div class="talent-card bg-white p-7">
+<div class="w-12 h-12 rounded-full bg-rose/10 flex items-center justify-center mb-6"><i class="fa-solid fa-hat-wizard text-rose"></i></div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-rose mb-2">Illusionist</p>
+<h3 class="serif text-2xl mb-3">Suraj</h3>
+<p class="text-sm text-charcoal/50 mb-5">@illusionist_suraj</p>
+<a href="#contact" class="text-xs uppercase tracking-[0.15em]">Enquire <i class="fa-solid fa-arrow-right ml-2 text-rose"></i></a>
+</div>
+
+<div class="talent-card bg-white p-7">
+<div class="w-12 h-12 rounded-full bg-rose/10 flex items-center justify-center mb-6"><i class="fa-solid fa-headphones text-rose"></i></div>
+<p class="text-[10px] uppercase tracking-[0.2em] text-rose mb-2">DJ & Sound</p>
+<h3 class="serif text-2xl mb-3">DJ Draxon</h3>
+<p class="text-sm text-charcoal/50 mb-5">Darshan Palled</p>
+<a href="#contact" class="text-xs uppercase tracking-[0.15em]">Enquire <i class="fa-solid fa-arrow-right ml-2 text-rose"></i></a>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- SOCIAL IMPACT -->
+<section id="impact" class="py-28">
+<div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+
+<div>
+<p class="uppercase tracking-[0.3em] text-xs text-rose mb-5">Beyond Celebrations</p>
+<h2 class="serif text-4xl md:text-5xl leading-tight mb-7">
+Events with a <span class="italic text-rose">larger purpose.</span>
+</h2>
+<div class="gold-line mb-7"></div>
+<p class="text-charcoal/65 leading-8 mb-6">
+Analikha Events aims to bring social impact into the broader event ecosystem through a dedicated NGO initiative focused on community welfare, artistic empowerment and social development.
+</p>
+<p class="text-charcoal/65 leading-8 mb-8">
+The goal is to create opportunities where creativity, culture and community development can reinforce one another.
+</p>
+<a href="#contact" class="inline-flex items-center gap-3 border border-charcoal px-7 py-4 text-sm hover:bg-charcoal hover:text-white transition">
+Partner With Us <i class="fa-solid fa-arrow-right text-xs"></i>
+</a>
+</div>
+
+<div class="grid grid-cols-2 gap-5">
+<div class="bg-beige p-8">
+<i class="fa-solid fa-people-group text-rose text-2xl mb-8"></i>
+<h3 class="serif text-2xl mb-3">Community</h3>
+<p class="text-sm text-charcoal/55 leading-6">Supporting community welfare and meaningful social development.</p>
+</div>
+
+<div class="bg-charcoal text-white p-8 mt-10">
+<i class="fa-solid fa-palette text-gold text-2xl mb-8"></i>
+<h3 class="serif text-2xl mb-3">Art & Culture</h3>
+<p class="text-sm text-white/55 leading-6">Creating opportunities for artistic talent and cultural expression.</p>
+</div>
+
+<div class="bg-charcoal text-white p-8">
+<i class="fa-solid fa-hands-holding-circle text-gold text-2xl mb-8"></i>
+<h3 class="serif text-2xl mb-3">Empowerment</h3>
+<p class="text-sm text-white/55 leading-6">Connecting talent with platforms that create wider opportunities.</p>
+</div>
+
+<div class="bg-beige p-8 mt-10">
+<i class="fa-solid fa-seedling text-rose text-2xl mb-8"></i>
+<h3 class="serif text-2xl mb-3">Social Impact</h3>
+<p class="text-sm text-charcoal/55 leading-6">Building a model where celebrations can contribute to positive social change.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 bg-rose text-white">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<p class="uppercase tracking-[0.3em] text-xs text-white/70 mb-6">Your Occasion. Our Curation.</p>
+<h2 class="serif text-4xl md:text-6xl mb-7">Let's create something memorable.</h2>
+<p class="text-white/75 max-w-2xl mx-auto leading-7 mb-9">
+Tell us about your event, your vision and what you want your guests to remember.
+</p>
+<a href="#contact" class="inline-flex items-center gap-3 bg-white text-charcoal px-8 py-4 text-sm hover:bg-charcoal hover:text-white transition">
+Start an Enquiry <i class="fa-solid fa-arrow-right text-xs"></i>
+</a>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-28">
+<div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="grid lg:grid-cols-2 gap-20">
+
+<div>
+<p class="uppercase tracking-[0.3em] text-xs text-rose mb-5">Let's Connect</p>
+<h2 class="serif text-4xl md:text-5xl mb-7">Plan your experience.</h2>
+<div class="gold-line mb-8"></div>
+<p class="text-charcoal/60 leading-8 max-w-lg mb-10">
+Share a few details about your event and our team can understand what you are looking to create.
+</p>
+
+<div class="space-y-6">
+<div class="flex items-start gap-5">
+<div class="w-11 h-11 bg-beige flex items-center justify-center"><i class="fa-solid fa-location-dot text-rose"></i></div>
+<div><p class="text-xs uppercase tracking-[0.15em] mb-1">Location</p><p class="text-charcoal/55">Karnataka, India</p></div>
+</div>
+
+<div class="flex items-start gap-5">
+<div class="w-11 h-11 bg-beige flex items-center justify-center"><i class="fa-solid fa-envelope text-rose"></i></div>
+<div><p class="text-xs uppercase tracking-[0.15em] mb-1">Email</p><p class="text-charcoal/55">Contact us through the enquiry form.</p></div>
+</div>
+
+<div class="flex items-start gap-5">
+<div class="w-11 h-11 bg-beige flex items-center justify-center"><i class="fa-brands fa-instagram text-rose"></i></div>
+<div><p class="text-xs uppercase tracking-[0.15em] mb-1">Social</p><p class="text-charcoal/55">Follow Analikha Events for updates.</p></div>
+</div>
+</div>
+
+<div class="flex gap-3 mt-10">
+<a href="#" aria-label="Instagram" class="w-11 h-11 border border-charcoal/10 flex items-center justify-center hover:bg-charcoal hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+<a href="#" aria-label="Facebook" class="w-11 h-11 border border-charcoal/10 flex items-center justify-center hover:bg-charcoal hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+<a href="#" aria-label="WhatsApp" class="w-11 h-11 border border-charcoal/10 flex items-center justify-center hover:bg-charcoal hover:text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+</div>
+
+<div class="bg-beige p-8 lg:p-12">
+<div class="mb-8">
+<p class="uppercase tracking-[0.2em] text-xs text-rose mb-3">Enquiry</p>
+<h3 class="serif text-3xl">Tell us about your event</h3>
+</div>
+
+<form id="contactForm" class="space-y-5">
+<div class="grid sm:grid-cols-2 gap-5">
+<div>
+<label class="block text-xs uppercase tracking-[0.12em] mb-2">Name</label>
+<input type="text" id="name" required placeholder="Your name" class="w-full bg-white border border-charcoal/10 px-4 py-4 outline-none focus:border-rose transition">
+</div>
+<div>
+<label class="block text-xs uppercase tracking-[0.12em] mb-2">Phone</label>
+<input type="tel" id="phone" required placeholder="+91" class="w-full bg-white border border-charcoal/10 px-4 py-4 outline-none focus:border-rose transition">
+</div>
+</div>
+
+<div>
+<label class="block text-xs uppercase tracking-[0.12em] mb-2">Email</label>
+<input type="email" id="email" required placeholder="you@example.com" class="w-full bg-white border border-charcoal/10 px-4 py-4 outline-none focus:border-rose transition">
+</div>
+
+<div class="grid sm:grid-cols-2 gap-5">
+<div>
+<label class="block text-xs uppercase tracking-[0.12em] mb-2">Event Type</label>
+<select id="eventType" required class="w-full bg-white border border-charcoal/10 px-4 py-4 outline-none focus:border-rose transition">
+<option value="">Select event</option>
+<option>Wedding</option><option>Bridal Event</option><option>Birthday</option>
+<option>Corporate Event</option><option>Cultural Event</option><option>Private Celebration</option><option>Other</option>
+</select>
+</div>
+<div>
+<label class="block text-xs uppercase tracking-[0.12em] mb-2">Event Date</label>
+<input type="date" id="eventDate" class="w-full bg-white border border-charcoal/10 px-4 py-4 outline-none focus:border-rose transition">
+</div>
+</div>
+
+<div>
+<label class="block text-xs uppercase tracking-[0.12em] mb-2">Message</label>
+<textarea id="message" rows="5" required placeholder="Tell us about your event..." class="w-full bg-white border border-charcoal/10 px-4 py-4 outline-none focus:border-rose transition resize-none"></textarea>
+</div>
+
+<button type="submit" class="w-full bg-charcoal text-white py-4 text-sm tracking-wide hover:bg-rose transition">
+Send Enquiry <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+</button>
+
+<p id="formMessage" class="hidden text-sm text-center pt-2"></p>
+</form>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-charcoal text-white">
+<div class="max-w-7xl mx-auto px-6 lg:px-10 py-16">
+<div class="grid md:grid-cols-3 gap-12">
+
+<div>
+<img src="assets/analikha-logo.png" alt="Analikha Events" class="w-24 h-24 object-contain mb-5">
+<p class="serif italic text-white/60">Curating Experiences</p>
+</div>
+
+<div>
+<p class="uppercase tracking-[0.2em] text-xs text-gold mb-5">Explore</p>
+<div class="space-y-3 text-sm text-white/60">
+<a href="#about" class="block hover:text-white transition">About</a>
+<a href="#services" class="block hover:text-white transition">Services</a>
+<a href="#talent" class="block hover:text-white transition">Talent</a>
+<a href="#impact" class="block hover:text-white transition">Social Impact</a>
+</div>
+</div>
+
+<div>
+<p class="uppercase tracking-[0.2em] text-xs text-gold mb-5">Connect</p>
+<p class="text-white/60 text-sm leading-7 mb-5">Bespoke events. Exceptional talent. Meaningful experiences.</p>
+<a href="#contact" class="inline-flex items-center gap-2 text-sm hover:text-gold transition">
+Make an enquiry <i class="fa-solid fa-arrow-right text-xs"></i>
+</a>
+</div>
+</div>
+
+<div class="border-t border-white/10 mt-14 pt-7 flex flex-col md:flex-row justify-between gap-4">
+<p class="text-xs text-white/35">© 2026 Analikha Events. All rights reserved.</p>
+<p class="text-xs text-white/35">Curating Experiences</p>
+</div>
+</div>
+</footer>
+
+<script>
+const menuButton=document.getElementById("menuButton");
+const mobileMenu=document.getElementById("mobileMenu");
+
+menuButton.addEventListener("click",()=>mobileMenu.classList.toggle("active"));
+
+document.querySelectorAll("#mobileMenu a").forEach(link=>{
+  link.addEventListener("click",()=>mobileMenu.classList.remove("active"));
+});
+
+const eventDate=document.getElementById("eventDate");
+eventDate.setAttribute("min",new Date().toISOString().split("T")[0]);
+
+const contactForm=document.getElementById("contactForm");
+const formMessage=document.getElementById("formMessage");
+
+contactForm.addEventListener("submit",function(event){
+  event.preventDefault();
+
+  const name=document.getElementById("name").value.trim();
+  const phone=document.getElementById("phone").value.trim();
+  const email=document.getElementById("email").value.trim();
+  const eventType=document.getElementById("eventType").value;
+  const eventDateValue=document.getElementById("eventDate").value;
+  const message=document.getElementById("message").value.trim();
+
+  if(!name||!phone||!email||!eventType||!message){
+    formMessage.textContent="Please complete all required fields.";
+    formMessage.classList.remove("hidden");
+    return;
+  }
+
+  console.log({
+    name,phone,email,eventType,eventDate:eventDateValue,message
+  });
+
+  formMessage.textContent="Thank you. Your enquiry has been recorded for this demo.";
+  formMessage.classList.remove("hidden");
+  formMessage.classList.add("text-rose");
+  contactForm.reset();
+});
+
+const revealElements=document.querySelectorAll(".service-card,.talent-card");
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.style.opacity="1";
+      entry.target.style.transform="translateY(0)";
+    }
+  });
+},{threshold:.1});
+
+revealElements.forEach(element=>{
+  element.style.opacity="0";
+  element.style.transform="translateY(20px)";
+  element.style.transition="opacity .7s ease,transform .7s ease";
+  observer.observe(element);
+});
+</script>
+
+</body>
+</html>
