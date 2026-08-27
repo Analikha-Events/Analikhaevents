@@ -1,2 +1,2 @@
 # Analikhaevents
-**Analikha Events**, unfogettable d private celebrations, Analikha Events operates a dedicated NGO wing focused on community development and cultural preservation. By empowering local artisans and supporting grassroots initiatives, Deepesha S G ensures that every event not only delivers luxury and flair but also impact.
+**Analikha Events**, founded by Deepesha S G, creates customized event packages combining local artists—from makeover experts to DJs. It blends boutique planning with an NGO social impact initiative.
